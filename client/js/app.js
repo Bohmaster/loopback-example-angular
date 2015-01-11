@@ -7,9 +7,13 @@ angular
       $urlRouterProvider) {
     $stateProvider
       .state('todo', {
-        url: '',
-        templateUrl: 'views/todo.html',
-        controller: 'TodoController'
+        views: {
+          "main": {
+            url: '',
+            templateUrl: 'views/todo.html',
+            controller: 'TodoController'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('todo');
