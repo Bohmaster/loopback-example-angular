@@ -4,14 +4,18 @@ angular
     'ui.router'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
-      $urlRouterProvider) {
+                                                            $urlRouterProvider) {
     $stateProvider
       .state('todo', {
+        url: '',
         views: {
-          "main": {
-            url: '',
-            templateUrl: 'views/todo.html',
+          'head': {
+            template: "Head",
             controller: 'TodoController'
+          },
+          'body': {
+            url: '/body',
+            template: "Body"
           }
         }
       });
