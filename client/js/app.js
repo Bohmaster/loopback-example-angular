@@ -6,16 +6,12 @@ angular
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
                                                             $urlRouterProvider) {
     $stateProvider
-      .state('todo', {
+      .state('main', {
         url: '',
         views: {
-          'head': {
-            template: "Head",
+          'content': {
+            templateUrl: 'views/main.html',
             controller: 'TodoController'
-          },
-          'body': {
-            url: '/body',
-            template: "Body"
           }
         }
       });
